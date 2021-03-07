@@ -5,5 +5,16 @@ export const isEmpty = (stringArrayOrObject) => {
     return stringArrayOrObject === ''
   }
 
+  if (type === 'array') {
+    return !stringArrayOrObject.length
+  }
+
+  if (type === 'object') {
+    return Object.keys(stringArrayOrObject).length === 0
+  }
+
   return false
 }
+
+
+
